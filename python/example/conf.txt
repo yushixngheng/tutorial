@@ -1,0 +1,2 @@
+0#ping www.baidu.com#你好
+
