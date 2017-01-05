@@ -16,7 +16,7 @@ cd Python-2.7.8
 ./configure --prefix=/usr/local  
 make   
 make install  
-将python头文件拷贝到标准目录，以避免编译ansible时，找不到所需的头文件
+将python头文件拷贝到标准目录，以避免编译ansible时，找不到所需的头文件  
 cd /usr/local/include/python2.7  
 cp -a ./* /usr/local/include/  
 备份旧版本的python，并符号链接新版本的python  
@@ -24,8 +24,7 @@ cd /usr/bin
 mv python python.old  
 cd /usr/local/bin/  
 rm python  
-ln -s /usr/local/bin/python2.7  
-/usr/local/bin/python  
+ln -s /usr/local/bin/python2.7 /usr/local/bin/python  
 rm -f /usr/bin/python  
 cp /usr/local/bin/python2.7 /usr/bin/python
 
@@ -53,11 +52,11 @@ cd pycrypto-2.6.1
 python setup.py install  
 
 (4)、PyYAML模块安装  
-http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz
+http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz  
 tar xvzf yaml-0.1.5.tar.gz  
 cd yaml-0.1.5  
-./configure --prefix=/usr/local
-make --jobs=`grep processor /proc/cpuinfo | wc -l`  
+./configure --prefix=/usr/local  
+make --jobs=\`grep processor /proc/cpuinfo | wc -l`  
 make install  
 
 https://pypi.python.org/packages/source/P/PyYAML/PyYAML-3.11.tar.gz  
