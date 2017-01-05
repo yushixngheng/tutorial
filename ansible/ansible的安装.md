@@ -132,3 +132,15 @@ cd /etc/ansible
 mkdir callback_plugins   
 cd callback_plugins   
 wget https://raw.githubusercontent.com/jlafon/ansible-profile/master/callback_plugins/profile_tasks.py  
+
+注意：当ansible下的yum模块无法使用时候
+输入指令
+python  
+import yum  
+提示no module name yum  
+然后把python2.7下的建个yum连接到python2.6下的site-packages下的yum  
+缺少什么就要链接什么
+注意 有时候可能是.so文件需要连接
+例如：  
+cp /usr/lib64/python2.6/lib-dynload/bz2.so /usr/local/lib/python2.7/
+
